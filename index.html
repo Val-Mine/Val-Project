@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Val's garden</title>
+<link rel="icon" type="image/png" href="https://i.pinimg.com/736x/da/77/d9/da77d9abc83c947fbe9b7340864ec0e3.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{box-sizing:border-box;scroll-behavior:smooth;}
+body{margin:0;font-family:Verdana, sans-serif;background:#f6edff;color:#4b3869;}
+header{background:linear-gradient(135deg,#c8a2c8,#967bb6);color:white;text-align:center;padding:40px;}
+header h1{font-size:40px;}
+nav{background:#8064a2;display:flex;justify-content:center;gap:15px;padding:15px;position:sticky;top:0;z-index:10;}
+nav a{color:white;text-decoration:none;padding:10px 15px;border-radius:20px;}
+nav a:hover{background:#b22222;color:white;}
+.slideshow-container{max-width:1000px;position:relative;margin:10px auto 0;}
+.mySlides{display:none;}
+.mySlides img{width:100%;height:450px;object-fit:cover;border-radius:20px;}
+.prev,.next{cursor:pointer;position:absolute;top:50%;padding:15px;color:white;font-size:25px;background:#b22222;border-radius:50%;}
+.next{right:10px;}
+.prev{left:10px;}
+.prev:hover,.next:hover{background:#6b4c9a;}
+section{padding:70px 30px;}
+.card{background:white;padding:30px;border-radius:25px;border:3px solid #4b3869;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;}
+.card h2{color:#6b4c9a;}
+.favorite-title{background:#0d0d0d;border-radius:30px;border:3px solid #960000;box-shadow:0 10px 25px rgba(178,34,34,0.3);}
+.favorite-title h2{text-align:center;color:#960000;font-size:40px;}
+.favorite-title i{font-size:35px;}
+.favorite-flower{background:#0d0d0d;padding:40px;border-radius:30px;display:flex;gap:50px;align-items:center;box-shadow:0 10px 25px rgba(178,34,34,0.3);border:3px solid #b22222;}
+.favorite-flower img{width:400px;height:400px;object-fit:cover;border-radius:25px;}
+.favorite-flower h2{color:#720000;font-size:40px;}
+.favorite-flower h3{color:#970000;}
+.favorite-flower p{color:white;line-height:1.7;}
+.flower-card{background:rgb(255, 255, 255);padding:25px;border-radius:25px;display:flex;gap:30px;align-items:center;}
+.flower-card{margin:30px 0;background:white;padding:25px;border-radius:25px;display:flex;gap:30px;align-items:center;}
+.flower-card img{width:300px;height:300px;object-fit:cover;border-radius:25px;}
+.sakura{border:4px solid pink;}
+.sakura h2{color:#d87093;}
+.sakura h3{color:#ffb7c5;}
+.wisteria{border:4px solid #9b7bb8;}
+.wisteria h2{color:#a98acb;}
+.wisteria h3{color:#c8a9e8;}
+.forget{border:4px solid skyblue;}
+.forget h2{color:#6fa8dc;}
+.forget h3{color:#a7d8f0;}
+.moonflower{border:4px solid #8a7ca8;}
+.moonflower h2{color:#9b8bbd;}
+.moonflower h3{color:#c8bddc;}
+.black-dahlia{border:4px solid #4b1f2f;}
+.black-dahlia h2{color:#7a354d;}
+.black-dahlia h3{color:#b06a82;}
+.flower{color:#b22222;}
+footer{background:#8064a2;color:white;text-align:center;padding:20px;}
+.meaning-card{background:white;padding:25px;border-radius:25px;margin:30px 0;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.meaning-card.spider{border:4px solid #b22222;}
+.meaning-card.sakura{border:4px solid pink;}
+.meaning-card.wisteria{border:4px solid purple;}
+.meaning-card.forget{border:4px solid skyblue;}
+.meaning-card.moonflower{border:4px solid #8a7ca8;}
+.meaning-card.dahlia{border:4px solid #4b1f2f;}
+.meaning-card h2{color:#6b4c9a;}
+.meaning-card h3{color:#b22222;}
+footer a{color:white;text-decoration:none;margin:0 12px;font-size:32px;transition:0.3s;}
+footer a:hover{color:#ffb6e6;transform:scale(1.2);}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>
+<i class="fa-solid fa-seedling"></i>
+Val's Little Garden
+<i class="fa-solid fa-seedling"></i>
+</h1>
+<p>
+A small collection of flowers, stories, and meanings hidden in every petal.
+</p>
+</header>
+
+<nav>
+<a href="#home">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+<a href="#page1">
+<i class="fa-solid fa-spa"></i>
+My Favorite Flower
+</a>
+<a href="#page2">
+<i class="fa-solid fa-book"></i>
+Flowers That I Also Like
+</a>
+<a href="#page3">
+<i class="fa-solid fa-heart"></i>
+Flower Symbolism
+</a>
+<a href="#page4">
+<i class="fa-solid fa-link"></i>
+References
+</a>
+</nav>
+
+<div class="slideshow-container">
+<div class="mySlides">
+<img src="https://i.pinimg.com/originals/b6/fb/8b/b6fb8bf800c143dc4507fd31d024c807.gif" alt="cherry Blossoms gif">
+</div>
+
+<div class="mySlides">
+<img src="https://i.pinimg.com/originals/d1/96/46/d196463938585dde9b86bffc6cf27ee5.gif" alt="red spider lily gif">
+</div>
+
+<div class="mySlides">
+<img src="https://i.pinimg.com/originals/ce/00/b8/ce00b827e12043d497bd7b1a54991661.gif" alt="wisteria gif">
+</div>
+
+<div class="mySlides">
+<img src="https://i.pinimg.com/originals/6e/0d/55/6e0d55509c57227ebe029c6c9ac30e92.gif" alt="Forgte-me-not flower gif">
+</div>
+
+<div class="mySlides">
+<img src="https://i.pinimg.com/originals/1c/f0/16/1cf01622cc05eb956b3ded998d70eff2.gif" alt="Moon flower gif">
+</div>
+
+<div class="mySlides">
+<img src="https://31.media.tumblr.com/01dd3b06c00adb9edd91981c19cabd36/tumblr_mz26p0tkmL1s0pvf5o1_500.gif" alt="Black Dahlia gif">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<section id="home">
+<div class="card">
+<h2>
+<i class="fa-solid fa-house"></i>
+Welcome to My Little Garden
+</h2>
+<p>
+Flowers have always been more than just beautiful decorations.
+They carry different meanings, stories, and emotions that people
+have shared throughout history.
+</p>
+<p>
+This website is a small collection of flowers that I admire,
+from the mysterious Red Spider Lily to the elegant Wisteria and
+the delicate Cherry Blossom. Each flower has its own beauty,
+symbolism, and story to tell.
+</p>
+<p>
+Explore this garden and discover the hidden meanings behind
+different flowers, their interesting facts, and why they continue
+to inspire people around the world.
+</p>
+</div>
+
+</section>
+<section id="page1">
+    <div class="card favorite-title">
+        <h2 class="flower">
+            <i class="fa-solid fa-spa"></i>
+            My Favorite Flower
+        </h2>
+    </div>
+
+   <div class="favorite-flower">
+    <div>
+        <img src="https://i.pinimg.com/1200x/9c/10/c9/9c10c99e4af0e734d78e529ed7cb5189.jpg" alt="Red Spider Lily">
+    </div>
+    <div>
+        <h2>Red Spider Lily</h2>
+
+        <h3>The Flower of Farewells</h3>
+        <p>
+            The Red Spider Lily, scientifically known as 
+            <i>Lycoris radiata</i>, is a unique flower recognized
+            for its bright red petals and long, curved stamens that
+            resemble spider legs. It is known for blooming suddenly,
+            often appearing when its leaves have already disappeared,
+            creating a mysterious and magical appearance.
+        </p>
+        <p>
+            In Japan, it is called <i>Higanbana</i> (彼岸花),
+            meaning "flower of the equinox." It blooms around the
+            autumn equinox, a time when people traditionally remember
+            and honor their ancestors.
+        </p>
+        <p>
+            Because of its connection to remembrance and separation,
+            the Red Spider Lily is often associated with farewells,
+            lost connections, and memories of loved ones. Some legends
+            describe it as a flower that guides souls on their journey
+            to the afterlife.
+        </p>
+        <p>
+            Despite its tragic symbolism, the flower also represents
+            beauty, resilience, and the idea that endings can still
+            hold something meaningful. Its striking appearance makes
+            it a symbol of mystery and elegance.
+        </p>
+        <h3>Interesting Facts</h3>
+        <p>
+            • The Red Spider Lily grows from bulbs and usually blooms
+            before its leaves appear.
+            <br><br>
+            • It is commonly found in East Asia, especially Japan,
+            China, and Korea.
+            <br><br>
+            • The plant contains toxic compounds that protect it from
+            being eaten by animals.
+        </p>
+    </div>
+</div>
+
+<section id="page2">
+<div class="card">
+<h2>
+<i class="fa-solid fa-book"></i>
+Other Flowers That I Also Like
+</h2>
+</div>
+
+<div class="flower-card sakura">
+<div>
+<img src="https://i.pinimg.com/1200x/eb/11/e6/eb11e6869b51ed55af286b3fdc4b924f.jpg" alt="Cherry Blossom">
+</div>
+<div>
+
+<h2>Cherry Blossom</h2>
+<h3>The Flower of Fleeting Beauty</h3>
+<p>
+    Cherry Blossom, also known as <i>Sakura</i> (桜),
+    is a flower famous for its delicate petals and beautiful
+    spring blooms. The flower belongs to the genus
+    <i>Prunus</i>, with one of the most well-known varieties being
+    <i>Prunus serrulata</i>, also known as the Japanese cherry.
+</p>
+<p>
+    In Japan, Sakura represents the beauty of life and the passing
+    of time. Because cherry blossoms bloom for only a short period,
+    they are often seen as a reminder to appreciate and treasure
+    precious moments before they disappear.
+</p>
+<p>
+    Cherry blossoms are deeply connected to Japanese culture through
+    <i>Hanami</i> (花見), a tradition where people gather to admire
+    the blooming flowers. This celebration represents renewal, hope,
+    and the acceptance of change.
+</p>
+<p>
+    Although Sakura is often associated with happiness and spring,
+    its falling petals also carry a deeper meaning. They symbolize
+    the temporary nature of life and remind people that even
+    fleeting moments can be meaningful and beautiful.
+</p>
+<h3>Interesting Facts</h3>
+<p>
+    • There are hundreds of varieties of cherry blossoms with
+    different colors and shapes.
+    <br><br>
+    • Sakura season is celebrated through festivals and cultural
+    events in many countries.
+    <br><br>
+    • The cherry blossom is one of Japan's most recognizable
+    symbols and appears in art, literature, and traditions.
+</p>
+</div>
+</div>
+
+<div class="flower-card wisteria">
+    <div>
+        <img src="https://i.pinimg.com/1200x/e4/c5/6f/e4c56fdf396f35bea50462ed07a96381.jpg" alt="Wisteria">
+    </div>
+    <div>
+
+        <h2>Wisteria</h2>
+        <h3>The Flower of Grace and Devotion</h3>
+        <p>
+            Wisteria is a beautiful flowering vine known for
+            its hanging clusters of purple flowers. It is admired
+            for its elegance, fragrance, and graceful appearance.
+        </p>
+        <p>
+            In Japan, Wisteria is called <i>Fuji</i> (藤).
+            It is often associated with beauty, love, patience,
+            and lasting bonds.
+        </p>
+        <p>
+            Because Wisteria vines can grow for many years,
+            the flower is often seen as a symbol of endurance,
+            strength, and devotion.
+        </p>
+        <p>
+            Its beautiful cascading blooms make it a popular
+            flower in gardens and traditional Japanese landscapes.
+        </p>
+        <h3>Interesting Facts</h3>
+        <p>
+            • Wisteria vines can live for over 100 years.
+            <br><br>
+            • It grows by climbing and wrapping around structures.
+            <br><br>
+            • The Wisteria Tunnel in Japan is famous for its
+            beautiful purple flower displays.
+        </p>
+    </div>
+</div>
+
+<div class="flower-card forget">
+
+<div>
+<img src="https://i.pinimg.com/1200x/9b/56/25/9b562544ca87138fb1f2352a9f3f3b36.jpg" alt="Forget-Me-Not">
+</div>
+<div>
+<h2>Forget-Me-Not</h2>
+<h3>The Flower of Memories</h3>
+<p>
+    Forget-Me-Not, scientifically known as 
+    <i>Myosotis</i>, is a small but beautiful flower
+    recognized for its delicate blue petals and tiny
+    star-like appearance. Despite its size, it carries
+    a meaningful symbolism of remembrance and lasting memories.
+</p>
+<p>
+    The flower's name comes from the idea of never forgetting
+    someone important. Because of this, Forget-Me-Nots are often
+    associated with love, loyalty, and cherished connections
+    between people.
+</p>
+<p>
+    In many cultures, Forget-Me-Nots represent remembrance and
+    honoring the memories of loved ones. Its gentle appearance
+    makes it a symbol of kindness, sincerity, and devotion.
+</p>
+<p>
+    Although it looks fragile, the Forget-Me-Not is a resilient
+    flower that can grow in different environments. Its beauty
+    reminds people that even small things can have a lasting
+    impact.
+</p>
+<h3>Interesting Facts</h3>
+<p>
+    • Forget-Me-Nots usually have small blue flowers with
+    yellow centers.
+    <br><br>
+    • The flower belongs to the genus <i>Myosotis</i>, which
+    means "mouse's ear" in Greek because of the shape of its leaves.
+    <br><br>
+    • It is commonly used as a symbol of remembrance and
+    lasting friendship.
+</p>
+</div>
+</div>
+<div class="flower-card moonflower">
+<div>
+<img src="https://i.pinimg.com/1200x/89/1a/8e/891a8e86b0bd8390fd59c969d4f74c08.jpg" alt="Moonflower">
+</div>
+
+<div>
+<h2>Moonflower</h2>
+<h3>The Flower That Blooms Under the Moonlight</h3>
+
+<p>
+Moonflower, scientifically known as <i>Ipomoea alba</i>, is a unique
+flower known for blooming at night. It has large white petals that
+open in the evening and close when morning arrives, creating a
+mysterious and enchanting appearance.
+</p>
+
+<p>
+The flower is often associated with dreams, mystery, and new
+beginnings because it blooms under the moonlight. Its bright white
+color and nighttime blooming make it stand out among other flowers.
+</p>
+
+<p>
+Unlike many flowers that rely on sunlight, Moonflowers attract
+nighttime pollinators such as moths. Their sweet fragrance and
+beautiful appearance make them a favorite among gardeners.
+</p>
+
+<p>
+Because it only reveals its beauty during the night, the Moonflower
+is often seen as a symbol of hidden beauty, patience, and the magic
+found in quiet moments.
+</p>
+
+<h3>Interesting Facts</h3>
+
+<p>
+• Moonflowers usually bloom in the evening and close during the day.
+<br><br>
+• Their large white flowers can be easily seen in the darkness.
+<br><br>
+• They are related to morning glories, but they have opposite
+blooming schedules.
+</p>
+
+</div>
+</div>
+<div class="flower-card black-dahlia">
+<div>
+<img src="https://i.pinimg.com/736x/d8/5f/f0/d85ff00a03ed4d1ed4924a6bb202ef3b.jpg" alt="Black Dahlia">
+</div>
+
+<div>
+<h2>Black Dahlia</h2>
+<h3>The Flower of Mystery and Elegance</h3>
+<p>
+Black Dahlia is a striking flower known for its deep, dark petals
+and dramatic appearance. Although it is not truly black, its rich
+burgundy and dark purple shades create the illusion of a mysterious
+and elegant flower.
+</p>
+<p>
+Dahlias are native to Mexico and have been admired for their unique
+shapes and variety of colors. The Black Dahlia is especially loved
+because of its rare appearance and the sense of sophistication it
+brings to gardens.
+</p>
+<p>
+The flower is often associated with mystery, inner strength, and
+creativity. Its dark beauty represents individuality and the idea
+that something different can still be beautiful.
+</p>
+<p>
+Despite its dramatic name and appearance, the Black Dahlia is a
+delicate flower that requires care and attention to grow. Its
+unique color makes it a memorable addition to any flower collection.
+</p>
+<h3>Interesting Facts</h3>
+<p>
+• True black dahlias do not naturally exist; they are usually
+very dark shades of red, purple, or burgundy.
+<br><br>
+• Dahlias come in many sizes, shapes, and colors.
+<br><br>
+• The flower was named after Swedish botanist Anders Dahl.
+</p>
+</div>
+</div>
+</section>
+
+<section id="page3">
+<div class="card">
+
+<h2>
+<i class="fa-solid fa-heart"></i>
+Flower Symbolism
+</h2>
+
+<p>
+Every flower carries a story. Their colors, shapes, and history
+give them meanings that have been passed down through generations.
+</p>
+
+</div>
+
+<div class="meaning-card spider">
+<h2>Red Spider Lily</h2>
+<h3>Farewells & Memories</h3>
+<p>
+The Red Spider Lily is often associated with remembrance,
+separation, and memories of the past. Its mysterious beauty
+represents the emotions connected to endings and meaningful
+connections.
+</p>
+</div>
+
+<div class="meaning-card sakura">
+<h2>Cherry Blossom</h2>
+<h3>Beauty & Change</h3>
+<p>
+Cherry blossoms symbolize the beauty of life and the importance
+of appreciating precious moments. Their short blooming period
+reminds people that change is a natural part of life.
+</p>
+</div>
+
+<div class="meaning-card wisteria">
+<h2>Wisteria</h2>
+<h3>Devotion & Patience</h3>
+<p>
+Wisteria represents lasting bonds, elegance, and patience.
+Its long-growing vines symbolize strength and the beauty of
+relationships that grow over time.
+</p>
+</div>
+
+<div class="meaning-card forget">
+<h2>Forget-Me-Not</h2>
+<h3>Remembrance</h3>
+<p>
+Forget-Me-Nots are symbols of loyalty, memories, and never
+forgetting the people and moments that hold importance in our lives.
+</p>
+</div>
+
+<div class="meaning-card moonflower">
+<h2>Moonflower</h2>
+<h3>Mystery & Dreams</h3>
+<p>
+Moonflowers represent hidden beauty, dreams, and mystery because
+they bloom under the moonlight when the world becomes quiet.
+</p>
+</div>
+
+<div class="meaning-card dahlia">
+<h2>Black Dahlia</h2>
+<h3>Elegance & Strength</h3>
+<p>
+Black Dahlias symbolize individuality, inner strength, and
+elegance. Their dark appearance represents beauty found in
+uniqueness and difference.
+</p>
+</div>
+</section>
+
+<section id="page4">
+<div class="card">
+<h2>
+<i class="fa-solid fa-link"></i>
+References
+</h2>
+
+<p>
+W3Schools References/Tutorials:
+</p>
+
+<a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">
+W3Schools - Slideshow Tutorial
+</a>
+<br><br>
+<a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto">
+W3Schools - Automatic Slideshow Tutorial
+</a>
+<br><br>
+<a href="https://www.w3schools.com/howto/howto_css_icon_bar.asp">
+W3Schools - Icon Bar Tutorial
+</a>
+<br><br>
+
+<p>
+Icons:
+</p>
+
+<a href="https://fontawesome.com/">
+Font Awesome
+</a>
+<br><br>
+<p>
+Information about flowers:
+</p>
+<a href="https://en.wikipedia.org/wiki/Lycoris_radiata">
+Wikipedia - Red spider lily
+</a>
+<br><br>
+<a href="https://en.wikipedia.org/wiki/Cherry_blossom">
+    Wikipedia - Cherry Blossom
+</a>
+<br><br>
+<a href="https://en.wikipedia.org/wiki/Wisteria">
+    Wikipedia - Wisteria
+</a>
+<br><br>
+<a href="https://en.wikipedia.org/wiki/Myosotis">
+    Wikipedia - Forget-Me-Not
+</a>
+<br><br>
+<a href="https://en.wikipedia.org/wiki/Ipomoea_alba">
+Wikipedia - Moon Flower
+</a>
+<br><br>
+<a href="https://www.plantzenith.com/black-dahlia-flower/#part-2-the-symbolism-and-meaning-of-black-dahlia-flowers-200-words">
+    Wikipedia - Black Dahlia
+</a>
+
+<p>
+    Note: All images used in this website are sourced from Pinterest and Tumblr.
+</p>
+
+
+</div>
+</section>
+
+
+
+<footer>
+
+<p>Connect with me</p>
+<a href="https://www.facebook.com/ire.val.fae" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+</a>
+<a href="https://www.instagram.com/ires.val/" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+</a>
+<a href="https://www.tiktok.com/@1re.val" target="_blank">
+    <i class="fa-brands fa-tiktok"></i>
+</a>
+<a href="https://discord.gg/52JHjmKXn" target="_blank">
+    <i class="fa-brands fa-discord"></i>
+</a>
+<p>
+© 2026 Val's Little Garden. All rights reserved.
+</p>
+
+</footer>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+setInterval(function(){slideIndex++;showSlides(slideIndex);}, 3000);
+function plusSlides(n){showSlides(slideIndex += n);}
+function showSlides(n){let slides = document.getElementsByClassName("mySlides");if(n > slides.length){slideIndex = 1;}if(n < 1){slideIndex = slides.length;}
+for(let i = 0; i < slides.length; i++){slides[i].style.display = "none";}
+slides[slideIndex-1].style.display = "block";}
+</script>
+
+</body>
+</html>
